@@ -5,6 +5,52 @@ Secondary 1 #FAFAFA (White)
 Secondary 2 #C7A478 (Gold)
 */
 
+* {
+  box-sizing: border-box;
+}
+header {
+  background-color: #FFFFFF;
+  padding: 10px;
+  border-bottom: 3px solid #4a4a4a;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  -webkit-box-shadow: 0px 7px 4px 0px rgba(50, 50, 50, 0.46);
+  -moz-box-shadow:    0px 7px 4px 0px rgba(50, 50, 50, 0.46);
+  box-shadow:         0px 7px 4px 0px rgba(50, 50, 50, 0.46);
+}
+.logo {
+  max-width: 250px;
+  margin-left: 5px;
+}
+ nav > ul {
+  list-style-type: none;
+  padding: 0;
+}
+nav > ul > li {
+  display: inline-block;
+}
+nav > ul > li > a {
+  padding: 0 15px;
+  text-transform: none;
+  font-weight: 600;
+  color: #4a4a4a;
+}
+a {
+  color: #C7A478;
+  text-decoration: none;
+}
+nav > ul > li >a:active {
+  color: #994C30;
+}
+nav > ul > li >a:hover {
+  color: #CC6540;
+  text-decoration: underline;
+}
+nav > ul > li > a:visited {
+  color: #C7A478;
+}
+
 body  {
   background-color: #FAFAFA;
 font-family: 'Cormorant Garamond', serif;
@@ -40,21 +86,17 @@ h4 {
 img {
   width: 100%;
 }
-a {
-  color: #C7A478;
-  text-decoration: none;
+main {
+  padding-top: 180px;
 }
-a:hover {
-  color: #CC6540;
-  text-decoration: underline;
-}
-a:visited {
-  color: #C7A478;
+#hero {
+background-color: #C7A478;
+padding: 20px 0;
+display: inline-block;
+width:100%;
 
 }
-a:active {
-  color: #994C30;
-}
+
 
 .button {
   display: inline-block;
@@ -70,3 +112,14 @@ a:active {
   opacity: 0.8;
   text-decoration: none;
 }
+
+/* Layout styling */
+.container {
+  padding: 0 15px;
+}
+.row {
+  margin: 25px 0;
+}
+#work .row { padding-bottom: 25px; border-bottom: 1px solid #4a4a4a; }
+#hero h1 {
+  text-align: center;
