@@ -5,6 +5,7 @@ Secondary 1 #FAFAFA (White)
 Secondary 2 #C7A478 (Gold)
 */
 
+
 * {
   box-sizing: border-box;
 }
@@ -20,9 +21,10 @@ header {
   box-shadow:         0px 7px 4px 0px rgba(50, 50, 50, 0.46);
 }
 .logo {
-  max-width: 250px;
+  max-width: 150px;
   margin-left: 5px;
 }
+
  nav > ul {
   list-style-type: none;
   padding: 0;
@@ -54,7 +56,7 @@ nav > ul > li > a:visited {
 body  {
   background-color: #FAFAFA;
 font-family: 'Cormorant Garamond', serif;
-font-size: 16;
+font-size: 18;
 font-weight: 300;
 line-height: 1.6;
 color: #4A4A4A;
@@ -91,12 +93,15 @@ main {
 }
 #hero {
 background-color: #C7A478;
+text-align: center;
 padding: 20px 0;
 display: inline-block;
 width:100%;
 
 }
-
+#hero span {
+  display: block;
+}
 
 .button {
   display: inline-block;
@@ -108,9 +113,13 @@ width:100%;
   border-bottom: 2px solid #C7A478;
   transition: 0.2s opacity;
 }
+
 .button:hover {
   opacity: 0.8;
   text-decoration: none;
+  color: black;
+  background-color: #EDEDED
+
 }
 
 /* Layout styling */
@@ -120,6 +129,88 @@ width:100%;
 .row {
   margin: 25px 0;
 }
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 #work .row { padding-bottom: 25px; border-bottom: 1px solid #4a4a4a; }
 #hero h1 {
   text-align: center;
+}
+@keyframes color-change {
+  0% {fill: #edc655;}
+  50% {fill: #fcffad;}
+  100% {fill: #f76414;}
+}
+@keyframes cloud-move {
+  from {transform: translate(0,50px);}
+  to {transform: translate(200px,50px);}
+}
+
+@keyframes cloud-move-reverse {
+  from {transform: translate(446px,48px);}
+  to {transform: translate(100px, 48px);}
+}
+
+.sun {
+    animation-duration: 4s;
+    animation-name: color-change;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+.cloud-front {
+  animation-duration: 30s;
+  animation-name: cloud-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+@media only screen and (min-width: 640px) {
+  header {
+  text-align: unset;
+  padding: 35px 0 13px;
+  }
+  nav {
+      width: auto;
+      float: right;
+      margin-top: 35px;
+    }
+
+  [class*="col-"] {
+  width:50%;
+  float: left;
+  padding:15px;
+}
+
+#about-page h3 { margin-top: 0;}
+
+  }
+
+@media only screen and (min-width: 1024px) {
+.col-lg-7 {
+  width: 58.33%;
+  float:left;
+}
+
+.col-lg-5 {
+  width: 41.66%;
+  float:left;
+}
+
+}
+
+@media only screen and (min-width: 1440px) {
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
