@@ -7,13 +7,15 @@ Secondary 2 #C7A478 (Gold)
 * {
   box-sizing: border-box;
 }
+/* Header base code */
+
 
 header {
   background-color: #FFFFFF;
   padding: 10px;
   border-bottom: 3px solid #FFFFFF;
   width: 100%;
-  text-align: center;
+  text-align:;
   position: fixed;
   -webkit-box-shadow: 0px 7px 4px 0px rgba(50, 50, 50, 0.46);
   -moz-box-shadow: 0px 7px 4px 0px rgba(50, 50, 50, 0.46);
@@ -21,18 +23,50 @@ header {
 }
 
 .logo {
-  max-width: 150px;
+  max-width: 120px;
   margin-left: 5px;
+  padding-top: 5px;
+}
+
+
+/* END Header base code */
+
+
+
+/* Navigation base code */
+
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
+.navtoggle.responsive li  {
+  display: block;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255,127,80,0.5);
+}
+
+.navtoggle.responsive li:last-child  {
+  padding: 0 0 10px;
+}
+.navtoggle li .icon {
+  position: absolute;
+  padding-right: 0;
+  right: 0;
+  top: 30px;
+  font-size: 25px;
 }
 
 nav>ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
-nav>ul>li {
-  display: inline-block;
-}
 
 nav>ul>li>a {
   padding: 0 15px;
@@ -59,6 +93,12 @@ nav>ul>li>a:visited {
   color: #C7A478;
 }
 
+
+
+/* END Navigation base code */
+
+
+
 body {
   background-color: #FAFAFA;
   font-family: 'Cormorant Garamond', serif;
@@ -67,6 +107,10 @@ body {
   line-height: 1.6;
   color: #4A4A4A;
 }
+
+
+/* H1,H2,H3.... base code */
+
 
 h1, h2, h3, h4 {
   line-height: 1.4;
@@ -92,13 +136,21 @@ h4 {
   font-weight: 400;
 }
 
+
+/* END H1,H2,H3.... base code */
+
+
+
 img {
   width: 100%;
 }
 
+/* MAIN base code */
 main {
-  padding-top: 180px;
+  padding-top: 130px;
 }
+/* END MAIN base code */
+
 
 #hero {
   background-color: #C7A478;
@@ -110,7 +162,14 @@ main {
 
 #hero span {
   display: block;
+
 }
+
+
+
+
+/* BUTTON base code */
+
 
 .button {
   display: inline-block;
@@ -130,10 +189,20 @@ main {
   background-color: #EDEDED
 }
 
+
+/* END BUTTON base code */
+
+
 /* Layout styling */
 .container {
   padding: 0 15px;
 }
+.container_footer {
+
+
+}
+
+
 
 .row {
   margin: 25px 0;
@@ -153,6 +222,19 @@ main {
 #hero h1 {
   text-align: center;
 }
+
+#contact h2,p{
+  text-align: center;
+
+}
+ /* Social Icon Styles */
+
+
+
+
+/* END Social Icon Styles */
+
+/* ANIMATION/ TRANSITION @keyframes */
 
 @keyframes color-change {
   0% {
@@ -187,7 +269,6 @@ main {
     transform: translate(100px, 48px);
   }
 }
-
 .sun {
   animation-duration: 4s;
   animation-name: color-change;
@@ -208,6 +289,11 @@ main {
   animation: 34s cloud-move-reverse infinite alternate linear;
 }
 
+/* END ANIMATION/ TRANSITION @keyframes */
+
+
+/* MEDIA QUERIES */
+
 @media only screen and (min-width: 640px) {
   header {
     text-align: unset;
@@ -218,8 +304,26 @@ main {
     width: auto;
     float: right;
     margin-top: 35px;
+
+  }
+  nav > ul {
+    margin: 1em 0;
+  }
+  nav>ul>li {
+    display: inline-block;
   }
 
+.navtoggle li:not(:last-child) {
+  display: inline-block;
+}
+.navtoggle li:last-child {
+  display: none;
+}
+.navtoggle.responsive li  {
+  display: block;
+}
+
+  }
   [class*="col-"] {
     width: 50%;
     float: left;
@@ -250,3 +354,4 @@ main {
     margin-right: auto;
   }
 }
+/* END MEDIA QUERIES */
