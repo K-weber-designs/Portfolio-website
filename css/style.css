@@ -97,7 +97,11 @@ nav>ul>li>a:visited {
 
 /* END Navigation base code */
 
+.catchphrase {
+font-family: 'Cormorant Garamond', serif;
+font-weight: 400;
 
+}
 
 body {
   background-color: #FAFAFA;
@@ -128,7 +132,7 @@ h2 {
 
 h3 {
   font-size: 1.75em;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 h4 {
@@ -153,7 +157,8 @@ main {
 
 
 #hero {
-  background-color: #C7A478;
+  color: #C7A478;
+  background-color: #191919;
   text-align: center;
   padding: 20px 0;
   display: inline-block;
@@ -196,12 +201,17 @@ main {
 /* Layout styling */
 .container {
   padding: 0 15px;
-}
-.container_footer {
-
 
 }
+.container_footer{
+  display: block;
+ margin-left: auto;
+ margin-right: auto;
+ width: 50%;
+ max-width: 145px;
 
+
+}
 
 
 .row {
@@ -221,10 +231,13 @@ main {
 
 #hero h1 {
   text-align: center;
+
 }
 
 #contact h2,p{
   text-align: center;
+
+
 
 }
  /* Social Icon Styles */
